@@ -1,0 +1,19 @@
+{
+    "data": [
+        {
+            "name": "John Smith",
+            "age": 30,
+            "city": "Los Angeles"
+        },
+        {
+            "name": "Bill Johnson",
+            "age": 33,
+            "city": "San Francisco"
+        },
+        {
+            "name": "Ann Doe",
+            "age": 35,
+            "city": "Boulder"
+        }
+    ]
+}
