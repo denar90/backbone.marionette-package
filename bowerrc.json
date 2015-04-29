@@ -1,3 +1,4 @@
 {
-  "directory": "vendor/"
+  "cwd": "~/backbone.marionette-package"
+  "directory": "~/backbone.marionette-package/vendor/"
 }
