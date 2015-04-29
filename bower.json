@@ -15,17 +15,15 @@
     "web",
     "development"
   ],
-  "homepage": "https://github.com/denar90/backbone.marionette-package/tree/dev",
+  "homepage": "https://github.com/denar90/backbone.marionette-package",
   "authors": [
     "Denysov Artem"
   ],
   "license": "MIT",
-  "vendor": {
-    "dependencies": {
-      "marionette": "2.4.1",
-      "requirejs/text": "latest",
-      "handlebars": "3.0.3",
-      "bootstrap": "latest"
-    }
+  "dependencies": {
+    "marionette": "2.4.1",
+    "requirejs/text": "latest",
+    "handlebars": "3.0.3",
+    "bootstrap": "latest"
   }
 }
