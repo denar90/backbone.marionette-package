@@ -1,7 +1,7 @@
 {
   "name": "backbone.marionette-package",
   "description": "Backbone.marionette package with requirejs, underscorejs, jquery, handlebars",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "directory": "backbone.marionette-package/",
   "keywords": [
     "backbone",
