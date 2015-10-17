@@ -1,8 +1,8 @@
 define(['app',
 		'marionette',
 		'collections/listCollection',
-		'views/ListView',
-		'views/SortView',
+		'views/listView',
+		'views/sortView',
 		'layout/layout'], function(app, Marionette, ListCollection, ListView, SortView,  AppLayout) {
 
 	"use strict";

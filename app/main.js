@@ -1,11 +1,12 @@
+/*var path = '../node_modules/';
 require.config({
 	paths : {
-		underscore : '../vendor/underscore/underscore',
-		backbone   : '../vendor/backbone/backbone',
-		marionette : '../vendor/marionette/lib/backbone.marionette',
-		jquery     : '../vendor/jquery/dist/jquery',
-		handlebars : '../vendor/handlebars/handlebars',
-		text       : '../vendor/requirejs-text/text'
+		underscore : path + 'underscore/underscore',
+		backbone   : path + 'backbone/backbone',
+		marionette : path + 'backbone.marionette/lib/backbone.marionette.min',
+		jquery     : path + 'jquery/dist/jquery',
+		handlebars : path + 'handlebars/dist/handlebars.min',
+		text       : path + 'requirejs-text/text'
 	},
 	shim : {
 		underscore: {
@@ -20,13 +21,10 @@ require.config({
 			deps : ['backbone']
 		}
 	},
-	deps : ['jquery','underscore'],
-	//for debugging uncomment this lines
-	//waitSeconds: 15,
-	//urlArgs: "bust=" + new Date().getTime()
+	deps : ['jquery','underscore']
 });
-
-define(['app',
+*/
+require(['app',
 		'backbone',
 		'routers/Router',
 		'controllers/MainController'], function(app, Backbone, Router, Controller) {

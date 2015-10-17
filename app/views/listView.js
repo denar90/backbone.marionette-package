@@ -2,7 +2,7 @@ define(['app',
 		'marionette',
 		'handlebars',
 		'views/itemView',
-		'text!templates/list.html'], function(app, Marionette, Handlebars, ItemView, template) {
+		'text!templates/list.hbs'], function(app, Marionette, Handlebars, ItemView, template) {
 		
 	"use strict";
 	return Marionette.CompositeView.extend({

@@ -22,9 +22,9 @@
   "license": "MIT",
   "dependencies": {
     "marionette": "2.4.1",
-    "requirejs": "latest",
-    "requirejs-text": "latest",
+    "requirejs": "*",
+    "requirejs-text": "*",
     "handlebars": "3.0.3",
-    "bootstrap": "latest"
+    "bootstrap": "*"
   }
 }

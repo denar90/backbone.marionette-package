@@ -1,7 +1,7 @@
 define(['app',
 		'marionette',
 		'handlebars',
-		'text!templates/sort.html'], function(app, Marionette, Handlebars, template) {
+		'text!templates/sort.hbs'], function(app, Marionette, Handlebars, template) {
 		
 	"use strict";
 

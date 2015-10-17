@@ -1,0 +1,38 @@
+{
+  "name": "backbone.marionette-package",
+  "description": "Backbone.marionette package with requirejs, underscorejs, jquery, handlebars",
+  "version": "0.0.2",
+  "directory": "backbone.marionette-package/",
+  "keywords": [
+    "backbone",
+    "marionette",
+    "requirejs",
+    "underscorejs",
+    "jquery",
+    "handlebars",
+    "javacript",
+    "front-end",
+    "web",
+    "development"
+  ],
+  "homepage": "https://github.com/denar90/backbone.marionette-package",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denar90/backbone.marionette-package"
+  },
+  "authors": [
+    "Denysov Artem"
+  ],
+  "scripts": {
+    "postinstall": "bower cache clean && bower install"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "*",
+    "gulp-webserver": "*",
+    "gulp-concat": "*",
+    "gulp-bower": "0.0.10",
+    "gulp-requirejs-optimize": "~0.3.0",
+    "bower": "*"
+  }
+}

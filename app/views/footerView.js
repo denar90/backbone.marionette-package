@@ -1,7 +1,7 @@
 define(['app',
 		'marionette',
 		'handlebars',
-		'text!templates/footer.html'], function (app, Marionette, Handlebars, template) {
+		'text!templates/footer.hbs'], function (app, Marionette, Handlebars, template) {
 
 	"use strict";
 
