@@ -21,7 +21,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "marionette": "2.4.1",
+    "marionette": "2.4.3",
     "requirejs": "*",
     "requirejs-text": "*",
     "handlebars": "3.0.3",
