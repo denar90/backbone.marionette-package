@@ -1,4 +1,4 @@
-define(['marionette', 'handlebars', 'text!templates/header.html'], 
+define(['marionette', 'handlebars', 'text!templates/header.hbs'], 
 	function (Marionette, Handlebars, template) {
 
 	"use strict";

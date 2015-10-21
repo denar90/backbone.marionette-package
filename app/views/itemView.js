@@ -1,7 +1,7 @@
 define(['app',
 		'marionette',
 		'handlebars',
-		'text!templates/item.html'], function(app, Marionette, Handlebars, itemTemplate) {
+		'text!templates/item.hbs'], function(app, Marionette, Handlebars, itemTemplate) {
 		
 	"use strict";
 	return Marionette.ItemView.extend({

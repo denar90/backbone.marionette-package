@@ -16,15 +16,29 @@
     "development"
   ],
   "homepage": "https://github.com/denar90/backbone.marionette-package",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denar90/backbone.marionette-package"
+  },
   "authors": [
     "Denysov Artem"
   ],
+  "scripts": {
+    "postinstall": "bower install"
+  },
   "license": "MIT",
   "dependencies": {
-    "marionette": "2.4.3",
-    "requirejs": "*",
-    "requirejs-text": "*",
-    "handlebars": "3.0.3",
-    "bootstrap": "*"
+    "gulp": "*",
+    "gulp-webserver": "*",
+    "gulp-concat": "*",
+    "gulp-bower": "0.0.10",
+    "gulp-requirejs-optimize": "~0.3.0",
+    "gulp-watch": "^4.3.5",
+    "gulp-watch": "^4.3.5",
+    "gulp-jshint": "^1.11.2",
+    "map-stream": "0.0.6",
+    "run-sequence": "^1.1.4",
+    "bower": "*"
   }
+
 }

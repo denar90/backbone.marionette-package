@@ -1,4 +1,4 @@
-define(['marionette', 'handlebars', 'views/headerView', 'views/footerView', 'text!templates/main.html'],
+define(['marionette', 'handlebars', 'views/headerView', 'views/footerView', 'text!templates/main.hbs'],
 	function (Marionette, Handlebars, HeaderView, FooterView, mainTemplate) {
 
 	"use strict";
