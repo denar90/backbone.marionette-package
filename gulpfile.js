@@ -5,6 +5,8 @@ var watch = require('gulp-watch');
 var runSequence = require('run-sequence');
 var jshint = require('gulp-jshint');
 var map = require('map-stream');
+var merge = require('gulp-merge');
+var copy = require('gulp-copy');
 
 var exitOnJshintError = map(function(file, cb) {
 	if (!file.jshint.success) {
@@ -20,13 +22,18 @@ gulp.task('lint', function(callback) {
 		.pipe(exitOnJshintError);
 });
 
-gulp.task("scripts", function() {
-	return gulp.src("app/main.js")
+gulp.task("files", function() {
+	var outputPath = 'dist';
+	var cssSource = 'vendor/bootstrap/dist/css/bootstrap.min.css';
+	var css = gulp.src(cssSource).pipe(gulp.dest(outputPath + '/css'));
+	var js = gulp.src('app/main.js')
 		.pipe(requirejsOptimize({
 			optimize: 'none',
 			mainConfigFile: 'app/config.js'
 		}))
-		.pipe(gulp.dest('dist'))
+		.pipe(gulp.dest(outputPath + '/js'));
+
+ 	return merge(css, js);
 });
 
 gulp.task('server', function() {
@@ -40,5 +47,5 @@ gulp.task('server', function() {
 });
 
 gulp.task('build', function(callback) {
-	runSequence('lint', 'scripts', callback);
+	runSequence('lint', 'files', callback);
 });
