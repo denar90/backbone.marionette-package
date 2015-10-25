@@ -23398,7 +23398,7 @@ define('controllers/MainController',
 
 	'use strict';
 
-	return Marionette.Controller.extend({
+	return Marionette.Object.extend({
 		layout: null,
 		listCollection: null,
 
