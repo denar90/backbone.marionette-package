@@ -1,9 +1,13 @@
-define(['app',
-		'marionette',
-		'handlebars',
-		'text!templates/item.hbs'], function(app, Marionette, Handlebars, itemTemplate) {
+define('views/itemView',
+		[
+			'app',
+			'marionette',
+			'handlebars',
+			'text!templates/item.hbs'
+		], function(app, Marionette, Handlebars, itemTemplate) {
 		
-	"use strict";
+	'use strict';
+
 	return Marionette.ItemView.extend({
 		className: 'col-lg-4',
 		template: function(serialized_model) {
