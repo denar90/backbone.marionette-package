@@ -1,9 +1,12 @@
-require(['app',
-		'backbone',
-		'routers/Router',
-		'controllers/MainController'], function(app, Backbone, Router, Controller) {
+require([
+			'app',
+			'backbone',
+			'routers/Router',
+			'controllers/MainController'
+		], function(app, Backbone, Router, Controller) {
 
-	"use strict";
+	'use strict';
+
 	app.start();
 	new Router({
 		controller: new Controller()

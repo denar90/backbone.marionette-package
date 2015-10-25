@@ -2,7 +2,7 @@ define(['marionette', 'handlebars', 'views/headerView', 'views/footerView', 'tex
 	function (Marionette, Handlebars, HeaderView, FooterView, mainTemplate) {
 
 	"use strict";
-	return Backbone.Marionette.LayoutView.extend({
+	return Marionette.LayoutView.extend({
 		template: Handlebars.compile(mainTemplate),
 
 		regions: {

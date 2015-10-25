@@ -1,11 +1,15 @@
-define(['app',
-		'marionette',
-		'collections/listCollection',
-		'views/listView',
-		'views/sortView',
-		'layout/layout'], function(app, Marionette, ListCollection, ListView, SortView,  AppLayout) {
+define('controllers/MainController',
+		[
+			'app',
+			'marionette',
+			'collections/listCollection',
+			'views/listView',
+			'views/sortView',
+			'layout/layout'
+		], function(app, Marionette, ListCollection, ListView, SortView,  AppLayout) {
 
-	"use strict";
+	'use strict';
+
 	return Marionette.Controller.extend({
 		layout: null,
 		listCollection: null,

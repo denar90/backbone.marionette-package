@@ -1,9 +1,12 @@
-define(['app',
-		'marionette',
-		'handlebars',
-		'text!templates/footer.hbs'], function (app, Marionette, Handlebars, template) {
+define('views/footerView',
+		[
+			'app',
+			'marionette',
+			'handlebars',
+			'text!templates/footer.hbs'
+		], function (app, Marionette, Handlebars, template) {
 
-	"use strict";
+	'use strict';
 
 	return Marionette.ItemView.extend({
 		template: Handlebars.compile(template),

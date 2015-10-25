@@ -1,5 +1,11 @@
-define(['backbone', 'models/itemModel'], function(Backbone, ItemModel) {
-	"use strict";
+define('collections/listCollection',
+		[
+			'backbone', 
+			'models/itemModel'
+		], function(Backbone, ItemModel) {
+	
+	'use strict';
+
 	return Backbone.Collection.extend({
 		url: 'data.json',
 		model: ItemModel,

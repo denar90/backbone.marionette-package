@@ -1,9 +1,12 @@
-define(['app',
-		'marionette',
-		'handlebars',
-		'text!templates/sort.hbs'], function(app, Marionette, Handlebars, template) {
+define('views/sortView', 
+		[
+			'app',
+			'marionette',
+			'handlebars',
+			'text!templates/sort.hbs'
+		], function(app, Marionette, Handlebars, template) {
 		
-	"use strict";
+	'use strict';
 
 	return Marionette.CompositeView.extend({
 		template: Handlebars.compile(template),

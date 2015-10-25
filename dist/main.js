@@ -18706,8 +18706,9 @@ return jQuery;
   return Marionette;
 }));
 
-define('app',['marionette'], function(Marionette) {
-	"use strict";
+define('app', ['marionette'], function(Marionette) {
+	
+	'use strict';
 
 	var app = new Marionette.Application();
 
@@ -18720,20 +18721,29 @@ define('app',['marionette'], function(Marionette) {
 });
 
 define('routers/Router',['marionette'], function(Marionette) {
-	"use strict";
+	
+	'use strict';
 
 	return Marionette.AppRouter.extend({
 		appRoutes: {
-			"": "home"
+			'': 'home'
 		}
 	});
 });
-define('models/itemModel',['backbone'], function(Backbone) {
-	"use strict";
+define('models/itemModel', ['backbone'], function(Backbone) {
+	
+	'use strict';
+
 	return Backbone.Model.extend();
 });
-define('collections/listCollection',['backbone', 'models/itemModel'], function(Backbone, ItemModel) {
-	"use strict";
+define('collections/listCollection',
+		[
+			'backbone', 
+			'models/itemModel'
+		], function(Backbone, ItemModel) {
+	
+	'use strict';
+
 	return Backbone.Collection.extend({
 		url: 'data.json',
 		model: ItemModel,
@@ -23242,12 +23252,16 @@ define('text',['module'], function (module) {
 
 define('text!templates/item.hbs',[],function () { return '<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">\n<h2>{{name}}</h2>\n<p>Age: {{age}}</p>\n<p>City: {{city}}</p>';});
 
-define('views/itemView',['app',
-		'marionette',
-		'handlebars',
-		'text!templates/item.hbs'], function(app, Marionette, Handlebars, itemTemplate) {
+define('views/itemView',
+		[
+			'app',
+			'marionette',
+			'handlebars',
+			'text!templates/item.hbs'
+		], function(app, Marionette, Handlebars, itemTemplate) {
 		
-	"use strict";
+	'use strict';
+
 	return Marionette.ItemView.extend({
 		className: 'col-lg-4',
 		template: function(serialized_model) {
@@ -23259,13 +23273,17 @@ define('views/itemView',['app',
 
 define('text!templates/list.hbs',[],function () { return '';});
 
-define('views/listView',['app',
-		'marionette',
-		'handlebars',
-		'views/itemView',
-		'text!templates/list.hbs'], function(app, Marionette, Handlebars, ItemView, template) {
+define('views/listView',
+		[
+			'app',
+			'marionette',
+			'handlebars',
+			'views/itemView',
+			'text!templates/list.hbs'
+		], function(app, Marionette, Handlebars, ItemView, template) {
 		
-	"use strict";
+	'use strict';
+	
 	return Marionette.CompositeView.extend({
 		template: Handlebars.compile(template),
 		childView: ItemView,
@@ -23275,12 +23293,15 @@ define('views/listView',['app',
 
 define('text!templates/sort.hbs',[],function () { return '<button type="button" class="js-sort-data btn btn-primary" data-sort="age">Sort by age</button>\n<button type="button" class="js-sort-data btn btn-primary" data-sort="name">Sort by name</button>\n<button type="button" class="js-sort-data btn btn-primary" data-sort="city">Sort by city</button>';});
 
-define('views/sortView',['app',
-		'marionette',
-		'handlebars',
-		'text!templates/sort.hbs'], function(app, Marionette, Handlebars, template) {
+define('views/sortView', 
+		[
+			'app',
+			'marionette',
+			'handlebars',
+			'text!templates/sort.hbs'
+		], function(app, Marionette, Handlebars, template) {
 		
-	"use strict";
+	'use strict';
 
 	return Marionette.CompositeView.extend({
 		template: Handlebars.compile(template),
@@ -23300,10 +23321,15 @@ define('views/sortView',['app',
 
 define('text!templates/header.hbs',[],function () { return '<div class="jumbotron">\n\t<h1>Backbone.marionette package</h1>\n</div>';});
 
-define('views/headerView',['marionette', 'handlebars', 'text!templates/header.hbs'], 
-	function (Marionette, Handlebars, template) {
+define('views/headerView',
+		[
+			'marionette', 
+			'handlebars', 
+			'text!templates/header.hbs'
+		], function (Marionette, Handlebars, template) {
 
-	"use strict";
+	'use strict';
+
 	return Marionette.ItemView.extend({
 		template: Handlebars.compile(template)
 	});
@@ -23311,12 +23337,15 @@ define('views/headerView',['marionette', 'handlebars', 'text!templates/header.hb
 
 define('text!templates/footer.hbs',[],function () { return '<a href="#" class="js-get-more-data">Get more data</a>\n</br>\n<p>Author: <a href="https://github.com/denar90">denar90</a></p>\n\n';});
 
-define('views/footerView',['app',
-		'marionette',
-		'handlebars',
-		'text!templates/footer.hbs'], function (app, Marionette, Handlebars, template) {
+define('views/footerView',
+		[
+			'app',
+			'marionette',
+			'handlebars',
+			'text!templates/footer.hbs'
+		], function (app, Marionette, Handlebars, template) {
 
-	"use strict";
+	'use strict';
 
 	return Marionette.ItemView.extend({
 		template: Handlebars.compile(template),
@@ -23336,13 +23365,13 @@ define('views/footerView',['app',
 	});
 });
 
-define('text!templates/main.hbs!strip',[],function () { return '<header id="header">\n</header>\n\n<section id="main" class="container marketing">\n\t<div id="sorting" style="margin-bottom: 10px"></div>\n\t<div id="data"></div>\n</section>\n\n<footer id="footer">\n</footer>';});
+define('text!templates/main.hbs',[],function () { return '<header id="header">\n</header>\n\n<section id="main" class="container marketing">\n\t<div id="sorting" style="margin-bottom: 10px"></div>\n\t<div id="data"></div>\n</section>\n\n<footer id="footer">\n</footer>';});
 
-define('layout/layout',['marionette', 'handlebars', 'views/headerView', 'views/footerView', 'text!templates/main.hbs!strip'],
+define('layout/layout',['marionette', 'handlebars', 'views/headerView', 'views/footerView', 'text!templates/main.hbs'],
 	function (Marionette, Handlebars, HeaderView, FooterView, mainTemplate) {
 
 	"use strict";
-	return Backbone.Marionette.LayoutView.extend({
+	return Marionette.LayoutView.extend({
 		template: Handlebars.compile(mainTemplate),
 
 		regions: {
@@ -23357,14 +23386,18 @@ define('layout/layout',['marionette', 'handlebars', 'views/headerView', 'views/f
 		}
 	});
 });
-define('controllers/MainController',['app',
-		'marionette',
-		'collections/listCollection',
-		'views/listView',
-		'views/sortView',
-		'layout/layout'], function(app, Marionette, ListCollection, ListView, SortView,  AppLayout) {
+define('controllers/MainController',
+		[
+			'app',
+			'marionette',
+			'collections/listCollection',
+			'views/listView',
+			'views/sortView',
+			'layout/layout'
+		], function(app, Marionette, ListCollection, ListView, SortView,  AppLayout) {
 
-	"use strict";
+	'use strict';
+
 	return Marionette.Controller.extend({
 		layout: null,
 		listCollection: null,
@@ -23420,12 +23453,15 @@ define('controllers/MainController',['app',
 		}
 	});
 });
-require(['app',
-		'backbone',
-		'routers/Router',
-		'controllers/MainController'], function(app, Backbone, Router, Controller) {
+require([
+			'app',
+			'backbone',
+			'routers/Router',
+			'controllers/MainController'
+		], function(app, Backbone, Router, Controller) {
 
-	"use strict";
+	'use strict';
+
 	app.start();
 	new Router({
 		controller: new Controller()
