@@ -6,7 +6,6 @@ var runSequence = require('run-sequence');
 var jshint = require('gulp-jshint');
 var map = require('map-stream');
 var merge = require('gulp-merge');
-var copy = require('gulp-copy');
 
 var exitOnJshintError = map(function(file, cb) {
 	if (!file.jshint.success) {
