@@ -6,6 +6,7 @@ var runSequence = require('run-sequence');
 var jshint = require('gulp-jshint');
 var map = require('map-stream');
 var merge = require('gulp-merge');
+var run = require('gulp-run');
 
 var exitOnJshintError = map(function(file, cb) {
 	if (!file.jshint.success) {
@@ -47,4 +48,16 @@ gulp.task('server', function() {
 
 gulp.task('build', function(callback) {
 	runSequence('lint', 'files', callback);
+});
+
+gulp.task('test', function(done) {
+    var testem = require('testem');
+
+    var testemOptions = {
+        file: 'testem.json'
+    };
+
+    var t = new testem();
+
+    t.startCI(testemOptions, done);
 });
