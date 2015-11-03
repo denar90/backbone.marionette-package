@@ -6,7 +6,6 @@ var runSequence = require('run-sequence');
 var jshint = require('gulp-jshint');
 var map = require('map-stream');
 var merge = require('gulp-merge');
-var run = require('gulp-run');
 
 var exitOnJshintError = map(function(file, cb) {
 	if (!file.jshint.success) {
@@ -54,7 +53,8 @@ gulp.task('test', function(done) {
     var testem = require('testem');
 
     var testemOptions = {
-        file: 'testem.json'
+        file: 'testem.json',
+		launch: 'PhantomJS'
     };
 
     var t = new testem();

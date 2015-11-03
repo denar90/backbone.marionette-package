@@ -39,6 +39,7 @@
     "run-sequence": "^1.1.4",
     "gulp-merge": "~0.1.1",
     "testem": "~0.9.8",
+    "phantomjs": "^1.9.18",
     "bower": "*"
   }
 }
