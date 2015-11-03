@@ -18734,7 +18734,13 @@ define('models/itemModel', ['backbone'], function(Backbone) {
 	
 	'use strict';
 
-	return Backbone.Model.extend();
+	return Backbone.Model.extend({
+		defaults: {
+		    name: "",
+		    age: null,
+		    city: ""
+		  }
+	});
 });
 define('collections/listCollection',
 		[
@@ -23250,7 +23256,7 @@ define('text',['module'], function (module) {
 });
 
 
-define('text!templates/item.hbs',[],function () { return '<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">\n<h2>{{name}}</h2>\n<p>Age: {{age}}</p>\n<p>City: {{city}}</p>';});
+define('text!templates/item.hbs',[],function () { return '<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">\n<h2 class="js-name">{{name}}</h2>\n<p class="js-age">Age: {{age}}</p>\n<p class="js-city">City: {{city}}</p>';});
 
 define('views/itemView',
 		[

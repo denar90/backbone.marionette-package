@@ -48,3 +48,16 @@ gulp.task('server', function() {
 gulp.task('build', function(callback) {
 	runSequence('lint', 'files', callback);
 });
+
+gulp.task('test', function(done) {
+    var testem = require('testem');
+
+    var testemOptions = {
+        file: 'testem.json',
+		launch: 'PhantomJS'
+    };
+
+    var t = new testem();
+
+    t.startCI(testemOptions, done);
+});
