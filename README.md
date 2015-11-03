@@ -11,3 +11,6 @@ Backbone.marionette-package use requirejs, underscorejs, jquery, handlebars
 
 ###Build
 * Run `gulp build`
+
+###Tests
+* Run `gulp test`
